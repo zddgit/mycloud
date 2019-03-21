@@ -10,8 +10,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @MapperScan("com.zdd.mapper")
 @EnableEurekaClient
 @EnableDiscoveryClient
-public class ProductApp {
+public class ProductApp1 {
     public static void main(String[] args) {
-        SpringApplication.run(ProductApp.class,args);
+        SpringApplication.run(ProductApp1.class,args);
     }
 }

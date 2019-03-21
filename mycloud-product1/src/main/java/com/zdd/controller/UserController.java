@@ -18,6 +18,7 @@ public class UserController {
     @GetMapping("/user/{userid}")
     public Object getUser(@PathVariable Integer userid) {
         System.out.println(discoveryClient.description());
+        System.out.println("=========>服务提供者1");
         return userMapper.selectById(userid);
     }
 }

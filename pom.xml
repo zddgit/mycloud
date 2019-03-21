@@ -11,6 +11,7 @@
     <modules>
         <module>mycloud-api</module>
         <module>mycloud-product</module>
+        <module>mycloud-product1</module>
         <module>mycloud-security</module>
         <module>mycloud-eureka</module>
         <module>mycloud-eureka1</module>

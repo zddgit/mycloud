@@ -1,7 +1,9 @@
-#数据库配置
+
 spring:
+  #应用名称
   application:
     name: mycloud-product
+    #数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: mysql
@@ -12,7 +14,7 @@ spring:
 server:
   servlet:
     context-path: /product
-  port: 8080
+  port: 8081
 
 #日志级别配置
 logging:

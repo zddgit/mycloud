@@ -21,11 +21,11 @@ public class ConsumerController {
 
     @GetMapping("/user/{userid}")
     public Object getUser(@PathVariable Integer userid) {
-        ServiceInstance serviceInstance = loadBalancerClient.choose("MYCLOUD-PRODUCT");
-        System.out.println(
-                "【*** ServiceInstance ***】host = " + serviceInstance.getHost()
-                        + "、port = " + serviceInstance.getPort()
-                        + "、serviceId = " + serviceInstance.getServiceId());
+//        ServiceInstance serviceInstance = loadBalancerClient.choose("MYCLOUD-PRODUCT");
+//        System.out.println(
+//                "【*** ServiceInstance ***】host = " + serviceInstance.getHost()
+//                        + "、port = " + serviceInstance.getPort()
+//                        + "、serviceId = " + serviceInstance.getServiceId());
 
         User user = restTemplate.getForObject(USER_URL + userid, User.class);
         return user;
