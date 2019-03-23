@@ -16,6 +16,8 @@
         <module>mycloud-eureka</module>
         <module>mycloud-eureka1</module>
         <module>mycloud-consumer</module>
+        <module>mycloud-consumer-feign</module>
+        <module>mycloud-service</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>
@@ -31,6 +33,11 @@
             <dependency>
                 <groupId>com.zdd</groupId>
                 <artifactId>mycloud-security</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zdd</groupId>
+                <artifactId>mycloud-service</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <dependency> <!-- SpringCloud离不开SpringBoot，所以必须要配置此依赖包 -->
