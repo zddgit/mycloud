@@ -1,0 +1,42 @@
+#数据库配置
+spring:
+  application:
+    name: mycloud-user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: mysql
+    password: password
+    url: jdbc:mysql://192.168.10.53:3306/efmapi_20171220?useUnicode=true&characterEncoding=UTF-8&tinyInt1isBit=false
+
+#服务器配置
+server:
+#  servlet:
+#    context-path: /user
+  port: 8081
+
+#日志级别配置
+logging:
+  level: {root:DEBUG,'com.zdd':DEBUG}
+
+#eureka注册
+eureka:
+  client:
+    register-with-eureka: true
+    service-url: {defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka}
+  instance:
+    instance-id: mycloud-user
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 90  # 如果现在超过了90秒的间隔检查是否掉线（默认是90秒）
+info:
+  app.name: mycloud-user-hystrix
+  company.name: zdd
+
+#打开端口用来监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
