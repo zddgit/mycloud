@@ -10,8 +10,8 @@ spring:
 
 #服务器配置
 server:
-  servlet:
-    context-path: /product
+#  servlet:
+#    context-path: /product
   port: 8080
 
 #日志级别配置
@@ -28,8 +28,15 @@ eureka:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
     lease-expiration-duration-in-seconds: 90  # 如果现在超过了90秒的间隔检查是否掉线（默认是90秒）
+info:
+  app.name: mycloud-product-hystrix
+  company.name: zdd
 
-
-
+#打开端口用来监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-public class UserController {
+public class ProductController {
     @Resource
     private UserMapper userMapper;
     @Resource
@@ -19,7 +19,7 @@ public class UserController {
 
     @GetMapping("/user/{userid}")
     @HystrixCommand(fallbackMethod = "getFallback")
-    public Object getUser(@PathVariable Integer userid) {
+    public Object getProuct(@PathVariable Integer userid) {
         System.out.println(discoveryClient.description());
         System.out.println("=========>服务提供者hystrix");
         User user = userMapper.selectById(userid);
@@ -29,7 +29,6 @@ public class UserController {
         return user;
     }
     private Object getFallback(Integer userid){
-        System.out.println(userid);
         User user = new User();
         user.setId(9999);
         user.setName("HystrixName");
