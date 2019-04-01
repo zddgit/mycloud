@@ -12,13 +12,13 @@ spring:
 
 #服务器配置
 server:
-  servlet:
-    context-path: /product
+#  servlet:
+#    context-path: /product
   port: 8081
 
 #日志级别配置
 logging:
-  level: {root:INFO,'com.zdd':DEBUG}
+  level: {root: INFO,'com.zdd':DEBUG}
 
 #eureka注册
 eureka:

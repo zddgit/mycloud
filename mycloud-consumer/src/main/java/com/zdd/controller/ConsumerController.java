@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 
 @RestController
 public class ConsumerController {
-    private final String USER_URL = "http://MYCLOUD-PRODUCT/product/user/";
+    private final String USER_URL = "http://MYCLOUD-PRODUCT/user/";
     @Resource
     private RestTemplate restTemplate;
     @Resource

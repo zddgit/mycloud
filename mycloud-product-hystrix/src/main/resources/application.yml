@@ -16,7 +16,7 @@ server:
 
 #日志级别配置
 logging:
-  level: {root:DEBUG,'com.zdd':DEBUG}
+  level: {root: info,'com.zdd': DEBUG}
 
 #eureka注册
 eureka:
@@ -24,7 +24,7 @@ eureka:
     register-with-eureka: true
     service-url: {defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka}
   instance:
-    instance-id: mycloud-product
+    instance-id: mycloud-product-hystrix
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
     lease-expiration-duration-in-seconds: 90  # 如果现在超过了90秒的间隔检查是否掉线（默认是90秒）

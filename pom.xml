@@ -23,6 +23,7 @@
         <module>mycloud-service</module>
         <module>mycloud-consumer-hystrix-dashboard</module>
         <module>mycloud-turbine</module>
+        <module>mycloud-zuul-gateway</module>
     </modules>
     <properties>
         <jdk.version>1.8</jdk.version>
