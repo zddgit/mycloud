@@ -21,7 +21,15 @@ logging:
   level: {root: info,'com.zdd': DEBUG}
 zuul:
   routes:
+  # users1:
+  #    path: /users1-proxy/**
+  #    serviceId: mycloud-user
+  # users2:
+  #    path: /users2-proxy/**
+  #    url: http://localhost:8080/
+  #注释得和下面得一样功能，一个去注册中心找，一个直接调用
     mycloud-product: /users-proxy/**
  # ignored-services: mycloud-product
+ # 下面是屏蔽注册中心得所有服务，直接通过zull得ip+eureka服务名不能访问
   ignored-services: "*"
   prefix: /gateway
